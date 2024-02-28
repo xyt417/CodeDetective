@@ -1,0 +1,72 @@
+import {createRouter, createWebHistory} from 'vue-router'
+import LoginOrRegisterView from "@/views/LoginOrRegisterView.vue";
+import store from "@/store"
+import {ElMessage} from "element-plus";
+import HomeView from "@/views/HomeView.vue";
+import UserProfileView from "@/views/UserProfileView.vue";
+
+const routes = [
+	{
+		path: '/',
+		name: 'HomeView',
+		component: HomeView,
+		meta: { // 名字随意
+			requestAuth: true,
+		}
+	},
+	{
+		path: '/profile',
+		name: 'UserProfileView',
+		component: UserProfileView,
+		meta: {
+			requestAuth: true,
+		}
+	},
+	{
+	path: '/login',
+	name: 'LoginView', // 不能重复
+	component: LoginOrRegisterView,
+	meta: {
+			requestAuth: false,
+		},
+	},
+	{
+	path: '/register',
+	name: 'RegisterView',
+	component: LoginOrRegisterView,
+	meta: {
+			requestAuth: false,
+		},
+	}
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
+
+router.beforeEach((to, from, next) => {
+	if(to.meta.requestAuth && store.state.user.is_login === false) {
+		const jwt_token = localStorage.getItem("jwt_token");
+		if(jwt_token){
+			store.commit("updateToken", jwt_token);
+			store.dispatch("getUserInfo", {
+				success(resp){
+					ElMessage.success("获取用户信息成功");
+					console.log("userInfo: ", resp);
+					router.push("/");
+				},
+				error() {
+					ElMessage.error("未获取到用户信息");
+				},
+			})
+		} else {
+			router.push("/login");
+		}
+
+	} else {
+		next(); // 执行默认跳转
+	}
+})
+
+export default router
