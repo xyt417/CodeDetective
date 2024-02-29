@@ -68,7 +68,7 @@ public class WebSecurityConfig {
             }
             // 在满足IP地址的情况下允许的 URL
             // 暂时没有
-            System.out.println("Access" + requestUrl + " is not allowed directly");
+            System.out.println("Access Url: " + requestUrl + " is not allowed directly");
             return false;
         };
 

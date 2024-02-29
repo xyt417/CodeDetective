@@ -27,15 +27,12 @@ public class JwtUtils {
         System.out.println("ttl: " + ttl);
         System.out.println("header: " + header);
     }
-
-    private SecretKey key;
     public String generateToken(String userId) {
         Date nowDate = new Date();
         Date expireDate = new Date(nowDate.getTime() + 1000* ttl); // s to ms
         MacAlgorithm alg = Jwts.SIG.HS512;
         byte[] keyBytes = Base64.decodeBase64(secret);
-
-        key = Keys.hmacShaKeyFor(keyBytes);
+        SecretKey key = Keys.hmacShaKeyFor(keyBytes);
         return Jwts.builder().header().add("type", "JWT").and()
                 .issuer("CodeDetective")
                 .issuedAt(nowDate)
@@ -46,6 +43,8 @@ public class JwtUtils {
                 .compact();
     }
     public Claims getPayloadByToken(String token) throws SignatureException, ExpiredJwtException {
+        byte[] keyBytes = Base64.decodeBase64(secret);
+        SecretKey key = Keys.hmacShaKeyFor(keyBytes);
         return Jwts.parser()
                 .verifyWith(key)
                 .build()

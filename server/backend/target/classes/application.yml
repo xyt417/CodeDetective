@@ -6,3 +6,12 @@ jwt:
   header: "Authorization"
   ttl: 1209600
   secret: "abcdqwerasdfpoiuuzxcvlkjhdfghyuohahahahacaonimaaooooaaaabbbbcccc56786666++++++++++++++++++++++++"
+oss:
+  endpoint: "oss-cn-beijing.aliyuncs.com"
+  region: "cn-beijing"
+  accessUsername: "ossUser@1863352413516545.onaliyun.com"
+  bucketName: "code-detective-bucket"
+  accessKeyId: "LTAI5t7gsqQb3eBXPrEAQrmS"
+  accessKeySecret: "ZNj5zZNKna1NpJjYgGyY7LyBUxALI8"
+  codeDir: "CodeRepositories/"
+

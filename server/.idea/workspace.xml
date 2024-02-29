@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bce16d8-2e62-4a86-b282-2721251dd269" name="Changes" comment="" />
+    <list default="true" id="7bce16d8-2e62-4a86-b282-2721251dd269" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Web/src/components/RepoCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/views/AllRepositoriesView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/views/MyRepositoriesView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/CreateRepositoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/ListRepositoriesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/mapper/RepositoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/pojo/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/CreateRepositoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/ListRepositoriesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/OSSUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/cdd/OSSUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/cdd/ServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/components/NaviBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/components/NaviBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/store/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/acb0e198-a101-47c3-a417-f1ac41fcea0e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/acb0e198-a101-47c3-a417-f1ac41fcea0e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/UserInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/UserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/UserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/filter/JwtAuthenticationTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/filter/JwtAuthenticationTokenFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/controller/UserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/controller/UserInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/utils/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/utils/JwtUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/com/cdd/JwtUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/test-classes/com/cdd/JwtUtilsTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,14 +48,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2cikdTDbxpEkcwwOaYP8xUvt88c" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -34,6 +76,10 @@
     "JUnit.JwtUtilsTest.testGenerateAndParse.executor": "Run",
     "JUnit.JwtUtilsTest.testGenerateToken.executor": "Run",
     "JUnit.JwtUtilsTest.testPrintInfo.executor": "Run",
+    "JUnit.OSSUtilsTest.executor": "Run",
+    "JUnit.OSSUtilsTest.testCreateDir.executor": "Run",
+    "JUnit.OSSUtilsTest.testListFilesAt.executor": "Run",
+    "JUnit.ServiceTest.testListRepositoriesService.executor": "Run",
     "Maven.CodeDetective [clean].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -41,7 +87,9 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.BackendApplication.executor": "Run",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "corretto-17",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/xyt/MainVault/CodeDetective/server/backend/src/test/resources",
@@ -76,16 +124,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BackendApplication">
-    <configuration name="DatabaseTest.testSelectUserByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="PACKAGE_NAME" value="com.cdd" />
-      <option name="MAIN_CLASS_NAME" value="com.cdd.DatabaseTest" />
-      <option name="METHOD_NAME" value="testSelectUserByUsername" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="JwtUtilsTest.testGenerateAndParse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
@@ -97,22 +135,6 @@
       <option name="PACKAGE_NAME" value="com.cdd" />
       <option name="MAIN_CLASS_NAME" value="com.cdd.JwtUtilsTest" />
       <option name="METHOD_NAME" value="testGenerateAndParse" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JwtUtilsTest.testGenerateToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cdd.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cdd" />
-      <option name="MAIN_CLASS_NAME" value="com.cdd.JwtUtilsTest" />
-      <option name="METHOD_NAME" value="testGenerateToken" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -134,6 +156,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OSSUtilsTest.testListFilesAt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cdd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cdd" />
+      <option name="MAIN_CLASS_NAME" value="com.cdd.OSSUtilsTest" />
+      <option name="METHOD_NAME" value="testListFilesAt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceTest.testListRepositoriesService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cdd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cdd" />
+      <option name="MAIN_CLASS_NAME" value="com.cdd.ServiceTest" />
+      <option name="METHOD_NAME" value="testListRepositoriesService" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cdd.BackendApplication" />
@@ -150,10 +204,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.BackendApplication" />
+        <item itemvalue="JUnit.ServiceTest.testListRepositoriesService" />
         <item itemvalue="JUnit.JwtUtilsTest.testGenerateAndParse" />
-        <item itemvalue="JUnit.JwtUtilsTest.testGenerateToken" />
         <item itemvalue="JUnit.JwtUtilsTest.testPrintInfo" />
-        <item itemvalue="JUnit.DatabaseTest.testSelectUserByUsername" />
+        <item itemvalue="JUnit.OSSUtilsTest.testListFilesAt" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +233,9 @@
       <workItem from="1708840911800" duration="128000" />
       <workItem from="1708841048159" duration="267000" />
       <workItem from="1708841323536" duration="42322000" />
+      <workItem from="1709112313427" duration="16984000" />
+      <workItem from="1709192185429" duration="5084000" />
+      <workItem from="1709197728160" duration="9163000" />
     </task>
     <servers />
   </component>

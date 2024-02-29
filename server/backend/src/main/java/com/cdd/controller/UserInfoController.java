@@ -12,7 +12,7 @@ public class UserInfoController {
     @Autowired
     private UserInfoService userInfoService;
 
-    @GetMapping("/userinfo")
+    @GetMapping("/user/info")
     public Map<String, String> getUserInfo(){
         return userInfoService.getUserInfo();
     }

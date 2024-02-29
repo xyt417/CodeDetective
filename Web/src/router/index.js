@@ -4,6 +4,8 @@ import store from "@/store"
 import {ElMessage} from "element-plus";
 import HomeView from "@/views/HomeView.vue";
 import UserProfileView from "@/views/UserProfileView.vue";
+import MyRepositoriesView from "@/views/MyRepositoriesView.vue";
+import AllRepositoriesView from "@/views/AllRepositoriesView.vue";
 
 const routes = [
 	{
@@ -18,6 +20,22 @@ const routes = [
 		path: '/profile',
 		name: 'UserProfileView',
 		component: UserProfileView,
+		meta: {
+			requestAuth: true,
+		}
+	},
+	{
+		path: '/my-repo',
+		name: 'MyRepositoriesView',
+		component: MyRepositoriesView,
+		meta: {
+			requestAuth: true,
+		}
+	},
+	{
+		path: '/all-repo',
+		name: 'AllRepositoriesView',
+		component: AllRepositoriesView,
 		meta: {
 			requestAuth: true,
 		}
@@ -58,6 +76,7 @@ router.beforeEach((to, from, next) => {
 				},
 				error() {
 					ElMessage.error("未获取到用户信息");
+					router.push("/login")
 				},
 			})
 		} else {
