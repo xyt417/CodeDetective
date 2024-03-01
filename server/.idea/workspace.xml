@@ -5,40 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bce16d8-2e62-4a86-b282-2721251dd269" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Web/src/components/RepoCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Web/src/views/AllRepositoriesView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Web/src/views/MyRepositoriesView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/CreateRepositoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/ListRepositoriesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/mapper/RepositoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/pojo/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/CreateRepositoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/ListRepositoriesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/OSSUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/cdd/OSSUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/cdd/ServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/src/components/NaviBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/components/NaviBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/store/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/HomeView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/acb0e198-a101-47c3-a417-f1ac41fcea0e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/acb0e198-a101-47c3-a417-f1ac41fcea0e.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/GetOSSPolicyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/GetOSSPolicyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/views/MyRepositoriesView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/MyRepositoriesView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/UserInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/UserInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/UserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/OSSUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/OSSUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/filter/JwtAuthenticationTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/filter/JwtAuthenticationTokenFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/controller/UserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/controller/UserInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/utils/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/utils/JwtUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/com/cdd/JwtUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/test-classes/com/cdd/JwtUtilsTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +94,7 @@
       <recent name="com.cdd" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cdd.service" />
       <recent name="com.cdd.config.filter" />
     </key>
   </component>
@@ -235,7 +210,7 @@
       <workItem from="1708841323536" duration="42322000" />
       <workItem from="1709112313427" duration="16984000" />
       <workItem from="1709192185429" duration="5084000" />
-      <workItem from="1709197728160" duration="9163000" />
+      <workItem from="1709197728160" duration="22621000" />
     </task>
     <servers />
   </component>

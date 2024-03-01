@@ -9,6 +9,7 @@ export default {
 		username: "",
 		photo: "",
 		is_login: false,
+		repos: [],
 	},
 	getter: {
 
@@ -23,6 +24,9 @@ export default {
 			state.photo = data.photo;
 			state.is_login = data.is_login;
 		},
+		updateRepos(state, data) {
+			state.repos = data;
+		}
 	},
 	actions: {
 		getUserInfo(context, data) {
@@ -37,6 +41,21 @@ export default {
 						context.commit("updateUserInfo", {
 							...resp,
 							is_login: true
+						})
+						$.ajax({
+							url: localStorage.getItem('Addr') + "/repository/list/" + context.state.username,
+							type: "get",
+							headers: {
+								Authorization: "Bearer " + context.state.token
+							},
+							success(resp) {
+								console.log("[ajax]getReposListResp: ", resp);
+								context.commit("updateRepos", resp);
+								ElMessage.success("已获取用户代码库列表");
+							},
+							error(err) {
+								console.log("[ajax]getReposListErr: ", err);
+							}
 						})
 						data.success(resp);
 					} else {

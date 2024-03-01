@@ -14,7 +14,7 @@
             </button>
         </div>
         <div class="container">
-            <button class="button" data-text="Awesome">
+            <button class="button" data-text="Awesome" @click="$router.push('/my-repo')">
                 <span class="actual-text">&nbsp;Code&nbsp;Detection&nbsp;</span>
                 <span aria-hidden="true" class="hover-text">&nbsp;Code&nbsp;Detection&nbsp;</span>
             </button>
@@ -53,21 +53,31 @@
         >
             <el-form :model="createRepositoryForm" style="margin-top: 15px;">
                 <el-form-item label="选择上传代码库: " >
-                    <el-input v-model="createRepositoryForm.repositoryName" autocomplete="off" />
-                </el-form-item>
-                <el-form-item label="Zones">
-                    <el-select placeholder="Please select a zone">
-                        <el-option label="Zone No.1" value="shanghai" />
-                        <el-option label="Zone No.2" value="beijing" />
+                    <el-select v-model="selectedRepo" placeholder="选择上传代码库">
+                        <el-option v-for="(repo, index) in $store.state.user.repos" :label="repo.repoName" :key="index" :value="repo.repoName"/>
                     </el-select>
                 </el-form-item>
+                <el-upload
+                        class="upload-demo"
+                        drag
+                        :action="uploadInfo.host"
+                        :data="uploadInfo"
+                        :before-upload="getPolicy"
+                        :on-error="handleUploadError"
+                        :on-success="handleUploadSuccess"
+                >
+                    <el-icon class="el-icon--upload"><upload-filled /></el-icon>
+                    <div class="el-upload__text">
+                        拖放或<em>点击</em>上传待检测项目文件
+                    </div>
+                    <template #tip>
+                        <div class="el-upload__tip">
+
+                        </div>
+                    </template>
+                </el-upload>
+
             </el-form>
-            <template #footer>
-                <div class="dialog-footer" v-loading="loading">
-                    <el-button @click="uploadFilesDialogVisible = false" style="margin-right: 20px;">取消</el-button>
-                    <el-button type="primary" @click="uploadFiles()">上传文件</el-button>
-                </div>
-            </template>
         </el-dialog>
 
     </div>
@@ -80,8 +90,59 @@ import {reactive, ref} from "vue";
 import {useStore} from "vuex";
 import $ from "jquery";
 import {ElMessage} from "element-plus";
+import { UploadFilled } from '@element-plus/icons-vue'
 
 const store = useStore();
+
+const handleUploadError = (err) => {
+	ElMessage.error("上传文件异常：" + err);
+}
+const handleUploadSuccess = (resp) => {
+    ElMessage.success("上传文件成功：" + resp);
+}
+
+
+const uploadInfo = reactive({
+    OSSAccessKeyId: "",
+    policy: "",
+    signature: "",
+    key: "",
+    host: "",
+})
+
+const getPolicy = (file) => {
+	if (selectedRepo.value === undefined) {
+        ElMessage.error("请选择上传代码库");
+        return false;
+    }
+	if (file.size > 1024 * 1024 * 1024) {
+        ElMessage.error("文件大小超过 1GB");
+        return false;
+    }
+	$.ajax({
+		url: localStorage.getItem('Addr') + "/oss/policy",
+		type: "post",
+		headers: {
+			Authorization: "Bearer " + store.state.user.token
+		},
+        data: {
+            repoName: selectedRepo.value
+        },
+		success(resp) {
+            uploadInfo.OSSAccessKeyId = resp.access_id;
+			uploadInfo.policy = resp.policy;
+			uploadInfo.signature = resp.signature;
+			uploadInfo.key = resp.dir + "${filename}";
+			uploadInfo.host = resp.host;
+			console.log("[ajax]getOSSPolicy: ", resp);
+			console.log("[uploadInfo]: ", uploadInfo);
+		},
+		error(err) {
+			console.log("[ajax]getOSSPolicyErr: ", err);
+			ElMessage.error("获取上传 Policy 异常：" + err);
+		}
+	})
+}
 
 const createRepositoryForm = reactive({
     repositoryName: "",
@@ -90,9 +151,10 @@ const createRepositoryForm = reactive({
 
 const createRepositoryDialogVisible = ref(false);
 const uploadFilesDialogVisible = ref(false);
-
-
 const loading = ref(false);
+
+const selectedRepo = ref();
+
 
 const createRepository = (name, description) => {
 	loading.value = true;
@@ -116,10 +178,6 @@ const createRepository = (name, description) => {
 			loading.value = false;
 		}
     })
-}
-
-const uploadFiles = () => {
-	console.log("uploadFiles");
 }
 
 </script>

@@ -6,15 +6,18 @@ import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.OSSException;
 import com.aliyun.oss.common.auth.CredentialsProvider;
 import com.aliyun.oss.common.auth.DefaultCredentialProvider;
-import com.aliyun.oss.model.ListObjectsRequest;
-import com.aliyun.oss.model.ObjectListing;
-import com.aliyun.oss.model.PutObjectRequest;
+import com.aliyun.oss.common.utils.BinaryUtil;
+import com.aliyun.oss.model.*;
+import com.cdd.pojo.User;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayInputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Data
@@ -120,6 +123,44 @@ public class OSSUtils {
         }
         res.put("message", "success");
         return res;
+    }
+
+    public Map<String, String> getOSSPolicy(String repoName){
+        OSS ossClient = initOssClient();
+        User user = UserUtils.getUserFromContext();
+        String username = user.getUsername();
+
+        Map<String, String> respMap = new LinkedHashMap<>();
+        try {
+            long expireTime = 3600;
+            long expireEndTime = System.currentTimeMillis() + expireTime * 1000;
+            String dir = codeDir + repoName + "/" + username + "/";
+            Date expiration = new Date(expireEndTime);
+            // PostObject请求最大可支持的文件大小为5 GB，即CONTENT_LENGTH_RANGE为5*1024*1024*1024。
+            PolicyConditions policyConds = new PolicyConditions();
+            policyConds.addConditionItem(PolicyConditions.COND_CONTENT_LENGTH_RANGE, 0, 1048576000);
+            policyConds.addConditionItem(MatchMode.StartWith, PolicyConditions.COND_KEY, dir);
+
+            String postPolicy = ossClient.generatePostPolicy(expiration, policyConds);
+            byte[] binaryData = postPolicy.getBytes(StandardCharsets.UTF_8);
+            String encodedPolicy = BinaryUtil.toBase64String(binaryData);
+            String postSignature = ossClient.calculatePostSignature(postPolicy);
+            String host = "https://" + bucketName + "." + endpoint;
+
+            respMap.put("access_id", accessKeyId);
+            respMap.put("policy", encodedPolicy);
+            respMap.put("signature", postSignature);
+            respMap.put("dir", dir);
+            respMap.put("host", host);
+            respMap.put("expire", String.valueOf(expireEndTime / 1000));
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            ossClient.shutdown();
+        }
+
+        return respMap;
     }
 
 }

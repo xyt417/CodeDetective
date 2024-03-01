@@ -1,7 +1,7 @@
 <template>
     <div class="outer">
         <RepoCard
-                v-for="(repoInfo, index) in repos"
+                v-for="(repoInfo, index) in $store.state.user.repos"
                 :key="index"
                 :repoInfo="repoInfo"
         />
@@ -10,30 +10,6 @@
 
 <script setup>
 import RepoCard from "@/components/RepoCard.vue";
-import {ref} from "vue";
-import $ from "jquery";
-import {useStore} from "vuex";
-import {ElMessage} from "element-plus";
-
-const store = useStore();
-const repos = ref([]);
-
-
-$.ajax({
-	url: localStorage.getItem('Addr') + "/repository/list/" + store.state.user.username,
-	type: "get",
-	headers: {
-		Authorization: "Bearer " + store.state.user.token
-	},
-	success(resp) {
-        console.log("[ajax]getReposListResp: ", resp);
-        repos.value = resp;
-		ElMessage.success("共找到 " + resp.length + " 个代码仓库");
-	},
-	error(err) {
-		console.log("[ajax]getReposListErr: ", err);
-	}
-})
 
 </script>
 
