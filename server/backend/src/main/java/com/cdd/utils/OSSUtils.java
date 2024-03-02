@@ -15,10 +15,8 @@ import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayInputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Data
 @Component
@@ -84,23 +82,31 @@ public class OSSUtils {
         return "success";
     }
 
-    public Map<String, Object> listObjectsAt(String path) {
+    public List<String> listObjectsAt(String path, boolean findDir) {
         OSS ossClient = initOssClient();
-        Map<String, Object> res = new HashMap<>();
+        List<String> objects = new LinkedList<>();
         try {
-            if (!ossClient.doesObjectExist(bucketName, path + "/")) {
-                res.put("message", "DirNotExists");
-                return res;
-            }
             // 构造ListObjectsRequest请求。
             ListObjectsRequest listObjectsRequest = new ListObjectsRequest(bucketName);
-            // 以 path + "/" 为前缀且第一次出现delimiter字符之间的文件作为一组元素
-            listObjectsRequest.setDelimiter("/");
             listObjectsRequest.setPrefix(path + "/");
+            if(findDir)
+                // 以 path + "/" 为前缀且第一次出现delimiter字符之间的文件作为一组元素
+                listObjectsRequest.setDelimiter("/");
             ObjectListing listing = ossClient.listObjects(listObjectsRequest);
 
-            // 遍历所有commonPrefix。
-            res.put("Directories", listing.getCommonPrefixes());
+            if(findDir) {
+                return listing.getCommonPrefixes();
+            } else {
+                for(OSSObjectSummary objectSummary : listing.getObjectSummaries()) {
+                    String filePath = objectSummary.getKey();
+                    if(filePath.endsWith("/")) continue; // skip directory name
+                    Date lastModified = objectSummary.getLastModified();
+                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    objects.add(filePath + "[" + formatter.format(lastModified) + "]");
+                }
+                // return listing.getObjectSummaries().stream().map(OSSObjectSummary::getKey).toList();
+                return objects;
+            }
         } catch (OSSException oe) {
             System.out.println("Caught an OSSException, which means your request made it to OSS, "
                     + "but was rejected with an error response for some reason.");
@@ -108,21 +114,17 @@ public class OSSUtils {
             System.out.println("Error Code:" + oe.getErrorCode());
             System.out.println("Request ID:" + oe.getRequestId());
             System.out.println("Host ID:" + oe.getHostId());
-            res.put("message", "OSSException");
-            return res;
         } catch (ClientException ce) {
             System.out.println("Caught an ClientException, which means the client encountered "
                     + "a serious internal problem while trying to communicate with OSS, "
                     + "such as not being able to access the network.");
             System.out.println("Error Message:" + ce.getMessage());
-            res.put("message", "ClientException");
         } finally {
             if (ossClient != null) {
                 ossClient.shutdown();
             }
         }
-        res.put("message", "success");
-        return res;
+        return new LinkedList<>();
     }
 
     public Map<String, String> getOSSPolicy(String repoName){

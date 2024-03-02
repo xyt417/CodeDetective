@@ -5,14 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bce16d8-2e62-4a86-b282-2721251dd269" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/GetOSSPolicyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/GetOSSPolicyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/assets/Code_Detective_color.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/assets/WelcomeToCode_Detective.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/views/RepoInnerView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/views/oldHomeView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/ListItemsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/ListItemsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/assets/water.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/components/RepoCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/components/RepoCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/store/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/HomeView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/src/views/MyRepositoriesView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/MyRepositoriesView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/codeanalyse/JplagRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/utils/JplagRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/test/java/JplagRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/test/java/JplagRunnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/OSSUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/utils/OSSUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/utils/OSSUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/utils/OSSUtils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +223,7 @@
       <workItem from="1708841323536" duration="42322000" />
       <workItem from="1709112313427" duration="16984000" />
       <workItem from="1709192185429" duration="5084000" />
-      <workItem from="1709197728160" duration="22621000" />
+      <workItem from="1709197728160" duration="42120000" />
     </task>
     <servers />
   </component>

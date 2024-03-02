@@ -1,4 +1,4 @@
-import codeanalyse.JplagRunner;
+import com.cdd.utils.JplagRunner;
 
 import java.util.Objects;
 

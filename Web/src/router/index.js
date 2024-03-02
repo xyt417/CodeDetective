@@ -6,6 +6,7 @@ import HomeView from "@/views/HomeView.vue";
 import UserProfileView from "@/views/UserProfileView.vue";
 import MyRepositoriesView from "@/views/MyRepositoriesView.vue";
 import AllRepositoriesView from "@/views/AllRepositoriesView.vue";
+import RepoInnerView from "@/views/RepoInnerView.vue";
 
 const routes = [
 	{
@@ -36,6 +37,14 @@ const routes = [
 		path: '/all-repo',
 		name: 'AllRepositoriesView',
 		component: AllRepositoriesView,
+		meta: {
+			requestAuth: true,
+		}
+	},
+	{
+		path: '/repo/:repoName',
+		name: 'RepoInnerView',
+		component: RepoInnerView,
 		meta: {
 			requestAuth: true,
 		}

@@ -68,23 +68,20 @@ export default {
 				}
 			})
 		},
-		getUserRepositories(context, data) {
+		getUserRepositories(context, username) {
 			$.ajax({
-				url: localStorage.getItem('Addr') + "/user/repositories",
+				url: localStorage.getItem('Addr') + "/repository/list/" + username,
 				type: "get",
 				headers: {
 					Authorization: "Bearer " + context.state.token
 				},
 				success(resp) {
-					if (resp.message === "success"){
-						data.success(resp);
-					} else {
-						data.error(resp);
-					}
+					console.log("[ajax]getReposListResp: ", resp);
+					context.commit("updateRepos", resp);
+					ElMessage.success("已获取用户代码库列表");
 				},
 				error(err) {
-					data.error(err);
-					console.log("[ajax]getUserRepositoriesErr: ", err);
+					console.log("[ajax]getReposListErr: ", err);
 				}
 			})
 		},

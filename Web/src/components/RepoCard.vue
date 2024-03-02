@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="card" @click="toRepo">
         <h3 class="card__title">{{props.repoInfo.repoName}}</h3>
         <p class="card__content">描述：{{props.repoInfo.description}}</p>
         <p class="card__content">所有者：{{props.repoInfo.ownerName}}</p>
@@ -14,11 +14,17 @@
 
 <script setup>
 import { defineProps } from 'vue'
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 const props = defineProps({
     repoInfo: Object,
-
 })
+
+const toRepo = () => {
+    router.push({name: 'RepoInnerView', params: {repoName: props.repoInfo.repoName}});
+}
+
 
 </script>
 
