@@ -1,5 +1,7 @@
 package com.cdd.utils;
 
+import org.springframework.stereotype.Component;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -7,6 +9,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+@Component
 public class JplagRunner {
     public void runJPlag(String submissionDirectory, String outputDirectory, String language, String args) {
         String jplagPath = Objects.requireNonNull(getClass().getClassLoader().getResource("jplag.jar")).getPath();

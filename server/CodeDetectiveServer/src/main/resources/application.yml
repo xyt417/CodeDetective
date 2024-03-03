@@ -1,0 +1,13 @@
+server.port: 3001
+spring.datasource.username: "root"
+spring.datasource.password: "abc123456"
+spring.datasource.url: "jdbc:mysql://localhost:3306/CodeDetective?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8"
+oss:
+  endpoint: "oss-cn-beijing.aliyuncs.com"
+  region: "cn-beijing"
+  accessUsername: "ossUser@1863352413516545.onaliyun.com"
+  bucketName: "code-detective-bucket"
+  accessKeyId: "LTAI5tCaZEPFBzVZBzdzGW3M"
+  accessKeySecret: "oeGJz0FLU8avXdN9U1nnlwDIK3qy0K"
+  codeDir: "CodeRepositories/"
+

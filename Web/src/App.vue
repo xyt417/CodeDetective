@@ -17,7 +17,8 @@ body,
     height: 50px;
     width: 200px;
     position: relative;
-    background-color: #f9f9f9;
+    background-color: #eeeeee;
+    font-size: 16px;
     cursor: pointer;
     border: 1px solid #252525;
     overflow: hidden;

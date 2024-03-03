@@ -10,6 +10,7 @@ export default {
 		photo: "",
 		is_login: false,
 		repos: [],
+		websocket: null,
 	},
 	getter: {
 
@@ -26,6 +27,9 @@ export default {
 		},
 		updateRepos(state, data) {
 			state.repos = data;
+		},
+		updateWebsocket(state, ws) {
+			state.websocket = ws;
 		}
 	},
 	actions: {
