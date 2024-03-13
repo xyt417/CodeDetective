@@ -12,8 +12,6 @@
                 :repoInfo="repoInfo"
         />
 
-
-
         <el-dialog
                 v-model="createRepositoryDialogVisible"
                 title="新建代码库"
@@ -80,6 +78,9 @@ const createRepository = (name, description) => {
 		}
 	})
 }
+
+store.dispatch("getUserRepositories", store.state.user.username);
+
 </script>
 
 <style scoped>

@@ -1,8 +1,8 @@
 <template>
     <video src="@/assets/Pixabay.mp4" autoplay muted loop id="background_video"/>
     <div class="outer">
-        <img class="header" src="@/assets/WelcomeToCode_Detective.svg" alt=""/>
-        <a class="swipe" style="margin-top: 10vh;" @click="$router.push('/my-repo')">Get Started
+        <img class="header" src="@/assets/欢迎使用源码相似性检测平台.svg" alt=""/>
+        <a class="swipe" style="margin-top: 10vh;" @click="$router.push('/my-repo')">即刻开始
             <span class="container">
                 <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0h24v24H0z" fill="none"></path>

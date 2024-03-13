@@ -69,7 +69,7 @@ public class CreateRepositoryService {
         User user = UserUtils.getUserFromContext();
         int userId = user.getId();
         String username = user.getUsername();
-        repo = new Repository(null, userId, username, reponame, description, new Date());
+        repo = new Repository(null, userId, username, reponame, description, new Date(), null);
         repositoryMapper.insert(repo);
         res.put("message", "success");
         return res;

@@ -9,11 +9,7 @@
     >
         <div style="width: 150px"></div>
         <el-menu-item index="/">
-            <img
-                    style="width: 150px;"
-                    src="../assets/Code_Detective.svg"
-                    alt="Element logo"
-            />
+           首页
         </el-menu-item>
         <el-menu-item index="/all-repo">{{"仓库列表"}}</el-menu-item>
         <div class="flex-grow" />

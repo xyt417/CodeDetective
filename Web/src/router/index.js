@@ -7,6 +7,7 @@ import UserProfileView from "@/views/UserProfileView.vue";
 import MyRepositoriesView from "@/views/MyRepositoriesView.vue";
 import AllRepositoriesView from "@/views/AllRepositoriesView.vue";
 import RepoInnerView from "@/views/RepoInnerView.vue";
+import ReportView from "@/views/ReportView.vue"
 
 const routes = [
 	{
@@ -42,9 +43,17 @@ const routes = [
 		}
 	},
 	{
-		path: '/repo/:repoName',
+		path: '/repo/:repoName/:detectionTime',
 		name: 'RepoInnerView',
 		component: RepoInnerView,
+		meta: {
+			requestAuth: true,
+		}
+	},
+	{
+		path: '/report/:repoName',
+		name: 'ReportView',
+		component: ReportView,
 		meta: {
 			requestAuth: true,
 		}
@@ -81,7 +90,9 @@ router.beforeEach((to, from, next) => {
 				success(resp){
 					ElMessage.success("获取用户信息成功");
 					console.log("userInfo: ", resp);
-					router.push("/");
+					if(to.path !== '/report') // 排除不需要跳转到主页的 url
+						router.push("/");
+					else next();
 				},
 				error() {
 					ElMessage.error("未获取到用户信息");

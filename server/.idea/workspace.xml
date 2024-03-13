@@ -5,47 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bce16d8-2e62-4a86-b282-2721251dd269" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/DetectionApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/controller/DetectionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/mapper/RepositoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/pojo/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/service/DetectionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/utils/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/utils/OSSUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/resources/download/whatever.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/resources/output/whatever.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/resources/submissions/whatever.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/websocket/WebSocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/assets/欢迎使用源码相似性检测平台.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/assets/源码相似性检测平台.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/components/DistributionDiagram.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/utils/getFileContentUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/views/ReportView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/config/RestTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/utils/RestUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/SendResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/components/NaviBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/components/NaviBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/components/RepoCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/components/RepoCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/store/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/views/LoginOrRegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/LoginOrRegisterView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/views/MyRepositoriesView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/MyRepositoriesView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/src/views/RepoInnerView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/RepoInnerView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/acb0e198-a101-47c3-a417-f1ac41fcea0e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/acb0e198-a101-47c3-a417-f1ac41fcea0e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/utils/JplagRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/utils/JplagRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/resources/output/text" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/resources/submissions/submission1/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/resources/submissions/submission2/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/test/java/JplagRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/test/java/JplagRunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/target/classes/codeanalyse/JplagRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/target/classes/jplag.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/target/classes/output/result.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/target/classes/output/text" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/target/classes/submissions/submission1/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/target/classes/submissions/submission2/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/target/test-classes/Test1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/ListItemsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/ListItemsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/controller/DetectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/controller/DetectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/pojo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/pojo/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/service/DetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/service/DetectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/pojo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/pojo/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/CreateRepositoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/CreateRepositoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/websocket/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/websocket/WebSocketServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/service/ListItemsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/service/ListItemsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/pojo/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/pojo/Repository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/service/CreateRepositoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/service/CreateRepositoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/service/websocket/WebSocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/service/websocket/WebSocketServer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,52 +70,52 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DatabaseTest.executor": "Run",
-    "Application.Test.executor": "Run",
-    "Application.Test1.executor": "Run",
-    "JUnit.DatabaseTest.executor": "Run",
-    "JUnit.DatabaseTest.testSelectUserByUsername.executor": "Run",
-    "JUnit.JwtUtilsTest.testGenerateAndParse.executor": "Run",
-    "JUnit.JwtUtilsTest.testGenerateToken.executor": "Run",
-    "JUnit.JwtUtilsTest.testPrintInfo.executor": "Run",
-    "JUnit.OSSUtilsTest.executor": "Run",
-    "JUnit.OSSUtilsTest.testCreateDir.executor": "Run",
-    "JUnit.OSSUtilsTest.testListFilesAt.executor": "Run",
-    "JUnit.ServiceTest.testListRepositoriesService.executor": "Run",
-    "Maven.CodeDetective [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.BackendApplication.executor": "Run",
-    "Spring Boot.DetectionApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/xyt/MainVault/CodeDetective/server/CodeDetectiveServer/src/main/resources/output",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.project.statistic.project.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DatabaseTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DatabaseTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DatabaseTest.testSelectUserByUsername.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JwtUtilsTest.testGenerateAndParse.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JwtUtilsTest.testGenerateToken.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JwtUtilsTest.testPrintInfo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OSSUtilsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OSSUtilsTest.testCreateDir.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OSSUtilsTest.testListFilesAt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ServiceTest.testListRepositoriesService.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.CodeDetective [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DetectionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/xyt/MainVault/CodeDetective/server/CodeDetectiveServer/src/main/resources/output&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/CodeDetectiveServer/src/main/resources/output" />
@@ -224,8 +218,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.DetectionApplication" />
         <item itemvalue="Spring Boot.BackendApplication" />
+        <item itemvalue="Spring Boot.DetectionApplication" />
         <item itemvalue="JUnit.ServiceTest.testListRepositoriesService" />
         <item itemvalue="JUnit.JwtUtilsTest.testGenerateAndParse" />
         <item itemvalue="JUnit.JwtUtilsTest.testPrintInfo" />
@@ -257,7 +251,12 @@
       <workItem from="1709112313427" duration="16984000" />
       <workItem from="1709192185429" duration="5084000" />
       <workItem from="1709197728160" duration="50970000" />
-      <workItem from="1709445990466" duration="19234000" />
+      <workItem from="1709445990466" duration="21489000" />
+      <workItem from="1709632081130" duration="1383000" />
+      <workItem from="1709645693109" duration="3000" />
+      <workItem from="1709723637392" duration="9612000" />
+      <workItem from="1710170883827" duration="842000" />
+      <workItem from="1710252050477" duration="10454000" />
     </task>
     <servers />
   </component>

@@ -50,7 +50,7 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
         // 一律允许的URL路径
-        String[] allowedUrls = {"/login", "/register", "/error"}; // 注意加 “/error" 让Spring Security不拦截错误页面
+        String[] allowedUrls = {"/login", "/register", "/result/send", "/error"}; // 注意加 “/error" 让Spring Security不拦截错误页面
 
         RequestMatcher customMatcher = request -> {
             String requestUrl = request.getRequestURI();

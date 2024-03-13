@@ -15,7 +15,7 @@
             <template #footer>
                 <button class="swi-btn swi-btn-type" style="width: 150px; margin-right: 50px;" @click="uploadFilesDialogVisible = true">上传项目</button>
                 <button class="swi-btn swi-btn-type green" style="width: 150px;" @click="send2detect">提交检测</button>
-                <button class="swi-btn swi-btn-type green" style="width: 150px;" @click="seeFile">查看java文件</button>
+<!--                <button class="swi-btn swi-btn-type green" style="width: 150px;" @click="seeFile">查看java文件</button>-->
             </template>
         </el-card>
 
@@ -50,22 +50,39 @@
 
             </el-form>
         </el-dialog>
+
+        <el-result v-if="detectionTime !== 'null'"
+                icon="success"
+                title="检测完成，点击查看检测报告"
+                style="background-color: transparent"
+        >
+            <template #extra>
+                <el-button type="primary" @click="router.push('/report/' + repoName)">查看检测报告</el-button>
+            </template>
+        </el-result>
+        <el-result icon="info" title="未提交检测" v-else>
+        </el-result>
+
     </div>
+
+
 
 </template>
 
 <script setup>
 import {onMounted, reactive, ref} from 'vue'
 import {useStore} from "vuex";
-import {useRoute} from "vue-router";
+import {useRoute, useRouter} from "vue-router";
 import $ from "jquery";
 import {ElMessage} from "element-plus";
 import {UploadFilled} from "@element-plus/icons-vue";
 
 const store = useStore();
 const route = useRoute();
+const router = useRouter();
 
-const repoName = route.params.repoName;
+let repoName = route.params.repoName;
+let detectionTime = ref(route.params.detectionTime);
 
 const tableData = ref([]);
 const loading = ref(false);
@@ -80,27 +97,28 @@ onMounted (() => {
 })
 
 // Test
-const seeFile = () => {
-	let fileUrl = "https://code-detective-bucket.oss-cn-beijing.aliyuncs.com/Results/user1的仓库/files/submissions[123]/submissions/submission1/backend/src/main/java/com/kos/backend/BackendApplication.java"
-	$.ajax({
-		url: fileUrl,
-		type: 'GET',
-		success: function(data) {
-			// data参数包含了文件内容
-			console.log(data); // 这里的data就是你的.java文件内容
-			// 在这里你可以处理文件内容，例如显示在页面上
-		},
-		error: function(xhr, status, error) {
-			// 处理错误情况
-			console.error("Error: " + error);
-		}
-	});
-}
+// const seeFile = () => {
+// 	let fileUrl = "https://code-detective-bucket.oss-cn-beijing.aliyuncs.com/Results/user1的仓库/files/submissions[123]/submissions/submission1/backend/src/main/java/com/kos/backend/BackendApplication.java"
+// 	$.ajax({
+// 		url: fileUrl,
+// 		type: 'GET',
+// 		success: function(data) {
+// 			// data参数包含了文件内容
+// 			console.log(data); // 这里的data就是你的.java文件内容
+// 			// 在这里你可以处理文件内容，例如显示在页面上
+// 		},
+// 		error: function(xhr, status, error) {
+// 			// 处理错误情况
+// 			console.error("Error: " + error);
+// 		}
+// 	});
+// }
 
 const send2detect = () => {
     socket.send(JSON.stringify({
         event: "detect-start",
         repo_name: repoName,
+        token: store.state.user.token,
     }));
 }
 
@@ -118,7 +136,8 @@ const connectWebsocket = () => {
 		if (data.event === "detect-start") {
 			ElMessage.success("已提交检测")
         } else if (data.event === "detect-finished") {
-            ElMessage.success("检测完成")
+            ElMessage.success("检测完成，结果已保存至云端")
+            detectionTime.value = data.detection_time; // TODO 热刷新后detectionTime就回到旧值了
         } else if (data.event === "detect-error") {
             ElMessage.error("检测异常：" + data.message)
 		}
@@ -226,7 +245,7 @@ const getPolicy = () => {
 <style scoped>
 .outer {
     margin: 30px 150px;
-    background-color: #f9f9f9;
+    background-color: white;
 }
 
 .outer >>> .el-dialog {

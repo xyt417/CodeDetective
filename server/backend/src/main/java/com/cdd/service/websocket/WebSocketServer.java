@@ -73,7 +73,18 @@ public class WebSocketServer {
             session.getBasicRemote().sendText(resp.toJSONString());
             MultiValueMap<String, String> data = new LinkedMultiValueMap<>();
             data.add("repo_name", dataReceived.getString("repo_name"));
+            data.add("user_id", jwtUtils.getPayloadByToken(dataReceived.getString("token")).getSubject());
             restTemplate.postForObject(startDetectionUrl, data, String.class);
+        }
+    }
+
+    public void sendMessage(String message) {
+        synchronized(this.session) {
+            try {
+                this.session.getBasicRemote().sendText(message);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

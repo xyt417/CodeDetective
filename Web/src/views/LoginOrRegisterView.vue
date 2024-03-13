@@ -6,7 +6,7 @@
         <div class="shell">
             <div class="container register_container" id="register-container" :class="{'is-txl': isTxl}">
                 <form action="" class="form" id="register-form">
-                    <img src="../assets/Code_Detective.svg" class="headline" alt=""/>
+                    <img src="../assets/源码相似性检测平台.svg" class="headline" alt=""/>
                     <h2 class="form_title title title1">注册</h2>
                     <input type="text" class="form-input" placeholder="用户名" v-model="username">
                     <input type="password" class="form-input" placeholder="密码" v-model="password">
@@ -17,7 +17,7 @@
 
             <div class="container login_container" id="login-container" :class="{'is-txl': isTxl, 'is-z': isZ}">
                 <form action="" class="form" id="login-form">
-                    <img src="../assets/Code_Detective.svg" class="headline" alt=""/>
+                    <img src="../assets/源码相似性检测平台.svg" class="headline" alt=""/>
                     <h2 class="form_title title title1">登录</h2>
                     <input type="text" class="form-input" placeholder="用户名" v-model="username">
                     <input type="password" class="form-input" placeholder="密码" v-model="password">
@@ -32,13 +32,13 @@
                 <div class="switch_circle switch_circle-t" :class="{'is-txr': isTxr}"></div>
 
                 <div class="switch_container" id="switch-c1" :class="{'is-hidden': isHidden}">
-                    <h2 class="switch_title title" style="letter-spacing: 0;">Hello!</h2>
+                    <h2 class="switch_title title" style="letter-spacing: 0;">欢迎使用!</h2>
                     <p class="switch_description description">登入已有账号</p>
                     <button class="switch_button button" @click="changeForm">登录账号</button>
                 </div>
 
                 <div class="switch_container" id="switch-c2" :class="{'is-hidden': !isHidden}">
-                    <h2 class="switch_title title" style="letter-spacing: 0;">Welcome Back!</h2>
+                    <h2 class="switch_title title" style="letter-spacing: 0;">欢迎回来!</h2>
                     <p class="switch_description description">还没有账号？立刻注册吧</p>
                     <button class="switch_button button" @click="changeForm">注册账号</button>
                 </div>

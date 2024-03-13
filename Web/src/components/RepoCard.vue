@@ -3,6 +3,7 @@
         <h3 class="card__title">{{props.repoInfo.repoName}}</h3>
         <p class="card__content">描述：{{props.repoInfo.description}}</p>
         <p class="card__content">所有者：{{props.repoInfo.ownerName}}</p>
+        <p class="card__content">最近检测时间：{{props.repoInfo.detectionTime ?  props.repoInfo.detectionTime: '无'}}</p>
         <div class="card__date">创建时间：{{props.repoInfo.createTime}}</div>
         <div class="card__arrow">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="20" width="20">
@@ -22,7 +23,7 @@ const props = defineProps({
 })
 
 const toRepo = () => {
-    router.push({name: 'RepoInnerView', params: {repoName: props.repoInfo.repoName}});
+    router.push({name: 'RepoInnerView', params: {repoName: props.repoInfo.repoName, detectionTime: props.repoInfo.detectionTime ? props.repoInfo.detectionTime : 'null'}});
 }
 
 

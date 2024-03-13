@@ -11,7 +11,7 @@ oss:
   region: "cn-beijing"
   accessUsername: "ossUser@1863352413516545.onaliyun.com"
   bucketName: "code-detective-bucket"
-  accessKeyId: "LTAI5t7gsqQb3eBXPrEAQrmS"
-  accessKeySecret: "ZNj5zZNKna1NpJjYgGyY7LyBUxALI8"
+  accessKeyId: "LTAI5tCaZEPFBzVZBzdzGW3M"
+  accessKeySecret: "oeGJz0FLU8avXdN9U1nnlwDIK3qy0K"
   codeDir: "CodeRepositories/"
 

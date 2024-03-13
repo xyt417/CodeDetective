@@ -1012,7 +1012,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="293" parent="1" name="CodeDetective">
-      <LastIntrospectionLocalTimestamp>2024-02-29.11:31:12</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-03-13.11:59:57</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="294" parent="1" name="mysql.infoschema">
@@ -1043,7 +1043,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="300" parent="298" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>21</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1071,47 +1071,51 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DasType>datetime|0s</DasType>
       <Position>6</Position>
     </column>
-    <index id="306" parent="298" name="PRIMARY">
+    <column id="306" parent="298" name="detection_time">
+      <DasType>datetime|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <index id="307" parent="298" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="307" parent="298" name="PRIMARY">
+    <key id="308" parent="298" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="308" parent="299" name="id">
-      <AutoIncrement>20</AutoIncrement>
+    <column id="309" parent="299" name="id">
+      <AutoIncrement>25</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="309" parent="299" name="username">
+    <column id="310" parent="299" name="username">
       <DasType>varchar(128)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="310" parent="299" name="password">
+    <column id="311" parent="299" name="password">
       <DasType>varchar(128)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="311" parent="299" name="create_time">
+    <column id="312" parent="299" name="create_time">
       <DasType>datetime|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="312" parent="299" name="photo">
+    <column id="313" parent="299" name="photo">
       <DasType>varchar(1024)|0s</DasType>
       <Position>5</Position>
     </column>
-    <index id="313" parent="299" name="PRIMARY">
+    <index id="314" parent="299" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="314" parent="299" name="PRIMARY">
+    <key id="315" parent="299" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
