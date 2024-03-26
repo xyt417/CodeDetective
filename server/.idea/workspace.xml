@@ -4,42 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bce16d8-2e62-4a86-b282-2721251dd269" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Web/src/assets/欢迎使用源码相似性检测平台.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Web/src/assets/源码相似性检测平台.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Web/src/components/DistributionDiagram.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Web/src/utils/getFileContentUtil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Web/src/views/ReportView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/utils/RestUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/SendResultController.java" afterDir="false" />
+    <list default="true" id="7bce16d8-2e62-4a86-b282-2721251dd269" name="Changes" comment="实现代码片段自动匹配页面">
+      <change afterPath="$PROJECT_DIR$/../Web/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/components/CodeMatchingComponent/CodePanel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/components/CodeMatchingComponent/FilesContainer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/components/CodeMatchingComponent/InteractableComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/components/CodeMatchingComponent/RoundedContainer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/components/CodeMatchingComponent/ScrollableComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/store/result.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/utils/CodeHighLighter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/utils/ColorUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/utils/Extractor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/utils/GetResultUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/src/views/CodeMatchingView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Web/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/controller/ListSubmissionFilesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/ListSubmissionFilesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/src/components/NaviBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/components/NaviBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/components/DistributionDiagram.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/components/DistributionDiagram.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/src/components/RepoCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/components/RepoCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/HomeView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/src/views/LoginOrRegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/LoginOrRegisterView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/src/views/MyRepositoriesView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/MyRepositoriesView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/store/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/utils/getFileContentUtil.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/src/views/RepoInnerView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/RepoInnerView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/src/views/ReportView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/src/views/ReportView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/acb0e198-a101-47c3-a417-f1ac41fcea0e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/acb0e198-a101-47c3-a417-f1ac41fcea0e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/controller/DetectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/controller/DetectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/pojo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/pojo/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/service/DetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeDetectiveServer/src/main/java/com/cdd/service/DetectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/pojo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/pojo/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/CreateRepositoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/CreateRepositoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/websocket/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/cdd/service/websocket/WebSocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/pojo/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/pojo/Repository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/service/CreateRepositoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/service/CreateRepositoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/cdd/service/websocket/WebSocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/cdd/service/websocket/WebSocketServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/cdd/OSSUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/cdd/OSSUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/com/cdd/OSSUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/test-classes/com/cdd/OSSUtilsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/com/cdd/ServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/test-classes/com/cdd/ServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +81,7 @@
     &quot;JUnit.JwtUtilsTest.testPrintInfo.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.OSSUtilsTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.OSSUtilsTest.testCreateDir.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OSSUtilsTest.testListFiles.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.OSSUtilsTest.testListFilesAt.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ServiceTest.testListRepositoriesService.executor&quot;: &quot;Run&quot;,
     &quot;Maven.CodeDetective [clean].executor&quot;: &quot;Run&quot;,
@@ -107,7 +107,8 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/xyt/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -141,8 +142,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DetectionApplication">
-    <configuration name="JwtUtilsTest.testGenerateAndParse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
+    <configuration name="OSSUtilsTest.testCreateDir" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -151,14 +152,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.cdd" />
-      <option name="MAIN_CLASS_NAME" value="com.cdd.JwtUtilsTest" />
-      <option name="METHOD_NAME" value="testGenerateAndParse" />
+      <option name="MAIN_CLASS_NAME" value="com.cdd.OSSUtilsTest" />
+      <option name="METHOD_NAME" value="testCreateDir" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JwtUtilsTest.testPrintInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OSSUtilsTest.testListFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -167,8 +168,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.cdd" />
-      <option name="MAIN_CLASS_NAME" value="com.cdd.JwtUtilsTest" />
-      <option name="METHOD_NAME" value="testPrintInfo" />
+      <option name="MAIN_CLASS_NAME" value="com.cdd.OSSUtilsTest" />
+      <option name="METHOD_NAME" value="testListFiles" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -220,9 +221,9 @@
       <list>
         <item itemvalue="Spring Boot.BackendApplication" />
         <item itemvalue="Spring Boot.DetectionApplication" />
+        <item itemvalue="JUnit.OSSUtilsTest.testListFiles" />
+        <item itemvalue="JUnit.OSSUtilsTest.testCreateDir" />
         <item itemvalue="JUnit.ServiceTest.testListRepositoriesService" />
-        <item itemvalue="JUnit.JwtUtilsTest.testGenerateAndParse" />
-        <item itemvalue="JUnit.JwtUtilsTest.testPrintInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -256,12 +257,45 @@
       <workItem from="1709645693109" duration="3000" />
       <workItem from="1709723637392" duration="9612000" />
       <workItem from="1710170883827" duration="842000" />
-      <workItem from="1710252050477" duration="10454000" />
+      <workItem from="1710252050477" duration="14223000" />
+      <workItem from="1710510605760" duration="390000" />
+      <workItem from="1710591289192" duration="651000" />
+      <workItem from="1710649592295" duration="1884000" />
+      <workItem from="1710753567261" duration="8909000" />
+      <workItem from="1710843230738" duration="3152000" />
+      <workItem from="1710856939026" duration="31000" />
+      <workItem from="1710856986392" duration="6243000" />
+      <workItem from="1711274358721" duration="1444000" />
     </task>
+    <task id="LOCAL-00001" summary="检测完成后进入overview界面">
+      <option name="closed" value="true" />
+      <created>1710351973714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710351973714</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="检测完成后进入overview界面" />
+    <MESSAGE value="实现代码片段自动匹配页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现代码片段自动匹配页面" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

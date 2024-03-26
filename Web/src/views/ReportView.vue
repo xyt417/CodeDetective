@@ -1,23 +1,39 @@
 <template>
     <div class="common-layout">
         <el-container>
-            <el-header  class="report-container" style="font-size: 25px;">报告概览：{{route.params.repoName}}</el-header>
+            <el-header class="report-container" style="font-size: 25px;">报告概览 [代码库: {{ route.params.repoName }}]
+            </el-header>
             <el-container class="overview-body">
-                <el-aside class="report-container" style="width: 50%">
+                <el-aside class="report-container" style="width: 35%">
                     <div style="height: 90%">
-                        检测项相似度分布
+                        仓库中各项目间相似度分布情况
                         <DistributionDiagram v-if="overviewJson" :overview="overviewJson"/>
                     </div>
                 </el-aside>
-                <el-main  class="report-container" style="width: 50%; text-align: center;">
-                    检测项详细报告
-                    <el-table :data="tableData" class="report-table-common" style="width: 100%; margin-top: 30px">
-                        <el-table-column prop="comparison" label="相似项目对" width="180" />
-                        <el-table-column prop="similarity" label="相似度" width="180" >
-                            <el-table-column label="最大相似度"></el-table-column>
-                            <el-table-column label="平均相似度"></el-table-column>
+                <el-main class="report-container" style="width: 65%; text-align: center;">
+                    项目比对结果详细报告
+
+                    <!-- 仓库中的所有提交文件都已经加载完毕 -->
+                    <el-table
+                            :data="topComparisons"
+                            class="report-table-common"
+                            style="width: 100%;
+                            margin-top: 30px"
+                            @row-click="rowClickHandler"
+                            v-if="$store.state.result.finishedNum === submissionIdList.length"
+                    >
+                        <el-table-column label="比对项目对">
+                            <el-table-column label="项目1" prop="firstSubmissionName" width="160"></el-table-column>
+                            <el-table-column label="项目2" prop="secondSubmissionName" width="160"></el-table-column>
                         </el-table-column>
-                        <el-table-column prop="submitters" label="项目提交者" />
+                        <el-table-column label="相似度" width="120">
+                            <el-table-column label="平均相似度" prop="similarity.AVG"></el-table-column>
+                            <el-table-column label="最大相似度" prop="similarity.MAX" ></el-table-column>
+                        </el-table-column>
+                        <el-table-column label="提交者" width="300">
+                            <el-table-column label="项目1提交者" prop="firstSubmitter" ></el-table-column>
+                            <el-table-column label="项目2提交者" prop="secondSubmitter"></el-table-column>
+                        </el-table-column>
                     </el-table>
                 </el-main>
             </el-container>
@@ -28,58 +44,50 @@
 <script setup>
 import DistributionDiagram from "@/components/DistributionDiagram.vue";
 import {useRoute} from "vue-router";
-import {getFileContent} from "@/utils/getFileContentUtil";
+import {getFileContent, resultsDirBaseUrl, storeSubmissionFiles} from "@/utils/GetResultUtil";
 import {ref} from "vue";
+import router from "@/router";
+import {Extractor} from "@/utils/Extractor";
+import {useStore} from "vuex";
+
 const route = useRoute();
+const store = useStore();
 
-const resultBaseUrl = "https://code-detective-bucket.oss-cn-beijing.aliyuncs.com/Results"
-const reportBaseUrl = resultBaseUrl + "/" + route.params.repoName;
-
-// 提取提交者的名字，例如从 "submissions[123]" 提取 "123"
-function extractSubmitter(submission) {
-	const matches = submission.match(/\[(.*?)]/);
-	return matches ? matches[1] : null;
-}
-
-// 转换函数
-function transformComparisons(data) {
-	const transformed = [];
-
-	data.forEach(item => {
-			// 提取提交者名字
-			const submitter1 = extractSubmitter(item.first_submission);
-			const submitter2 = extractSubmitter(item.second_submission);
-
-			// 构造新的对象格式
-			const transformedComparison = {
-				comparison: item.first_submission.split('[')[0] + " - " + item.second_submission.split('(')[0],
-				similarity: item.similarity,
-				submitters: submitter1 + ' - ' + submitter2,
-			};
-
-			// 添加到结果数组
-			transformed.push(transformedComparison);
-		});
-
-	return transformed;
-}
-
-// 使用转换函数
-const transformedArray = [];
-console.log(transformedArray);
+const reportDirBaseUrl = resultsDirBaseUrl + route.params.repoName + "/";
 
 let overviewJson = ref(null);
-let tableData = ref([])
-getFileContent(reportBaseUrl + "/overview.json")
-	.then(data => {
-		// 在这里处理解决后的数据
+const topComparisons = ref([]);
+const submissionIds2ComparisonFileName = ref(null);
+const submissionIdList = ref([]);
+getFileContent(reportDirBaseUrl + "overview.json").then(data => {
+        // 从overview.json中提取submissionId、submissionName(不包括提交者的名字)、similarity、submitter等信息
 		overviewJson.value = data;
-		tableData.value  = transformComparisons(data.metrics[0].topComparisons);
-	})
-	.catch(error => {
+		submissionIdList.value = Extractor.extractSubmissionIdList(data);
+		console.log("submissionIdList", submissionIdList);
+		topComparisons.value = Extractor.extractTopComparisonsFromMetrics(data.metrics);
+		console.log("topComparisons", topComparisons);
+		submissionIds2ComparisonFileName.value = Extractor.extractSubmissionIds2ConparisonFileName(data);
+		console.log("submissionIds2ComparisonFileName", submissionIds2ComparisonFileName)
+
+        // 拉取并储存仓库中的所有提交文件到store.state.result.submissions[] 中
+        store.state.result.finishedNum = 0; // 文件加载进度清空
+        for(let i = 0; i < submissionIdList.value.length; i++) {
+            storeSubmissionFiles(store, route.params.repoName, submissionIdList.value[i]);
+        }
+	}).catch(error => {
 		// 在这里处理错误
 		console.error("获取文件内容时出错:", error);
 	});
+
+const rowClickHandler = (row) => {
+	const _repoName = route.params.repoName;
+	console.log(store.state.result.submissions);
+	router.push({
+        name: "CodeMatchingView",
+        params: {repoName: _repoName},
+        query: {comparison: `${row.firstSubmissionId}-${row.secondSubmissionId}`, reportDirBaseUrl}
+	});
+}
 
 </script>
 
@@ -89,7 +97,7 @@ getFileContent(reportBaseUrl + "/overview.json")
 }
 
 .report-container {
-    margin: 20px;
+    margin: 10px;
     padding: 20px;
     height: 99%;
     border-radius: 20px;
@@ -98,9 +106,13 @@ getFileContent(reportBaseUrl + "/overview.json")
     text-align: center;
 }
 
-.report-table-common, .el-table thead.is-group th.el-table__cell {
+.common-layout .report-table-common, .el-table thead.is-group th.el-table__cell {
     text-align: center;
     background-color: #f9f9f9;
+}
+.common-layout .el-table--enable-row-transition .el-table__body td.el-table__cell {
+    background-color: #f9f9f9;
+    cursor: pointer;
 }
 
 

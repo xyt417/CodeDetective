@@ -22,7 +22,7 @@ const distribution = ref(props.overview.metrics[0].distribution);
 console.log("distribution", distribution.value)
 
 const maxBarLength = Math.max(...distribution.value); // 使用扩展运算符来从数据集中获取最大值
-const additionalSpace =  0.1;
+const additionalSpace =  0.2;
 
 const labels = [
 	'91-100%',

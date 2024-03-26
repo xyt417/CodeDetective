@@ -8,6 +8,7 @@ import MyRepositoriesView from "@/views/MyRepositoriesView.vue";
 import AllRepositoriesView from "@/views/AllRepositoriesView.vue";
 import RepoInnerView from "@/views/RepoInnerView.vue";
 import ReportView from "@/views/ReportView.vue"
+import CodeMatchingView from "@/views/CodeMatchingView.vue";
 
 const routes = [
 	{
@@ -54,6 +55,14 @@ const routes = [
 		path: '/report/:repoName',
 		name: 'ReportView',
 		component: ReportView,
+		meta: {
+			requestAuth: true,
+		}
+	},
+	{
+		path: '/report/:repoName/code-matching',
+		name: 'CodeMatchingView',
+		component: CodeMatchingView,
 		meta: {
 			requestAuth: true,
 		}

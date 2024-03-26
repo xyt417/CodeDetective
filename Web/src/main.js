@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import ElementPlus from 'element-plus'
 
+import "./style.css" // tailwind directives
+
 createApp(App).use(store).use(router).use(ElementPlus).mount('#app')
 
 localStorage.setItem("Addr", 'http://127.0.0.1:3000') // 后端地址

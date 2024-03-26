@@ -57,7 +57,7 @@
                 style="background-color: transparent"
         >
             <template #extra>
-                <el-button type="primary" @click="router.push('/report/' + repoName)">查看检测报告</el-button>
+                <button class="slash_btn" @click="router.push('/report/' + repoName)" >查看检测报告</button>
             </template>
         </el-result>
         <el-result icon="info" title="未提交检测" v-else>
@@ -95,24 +95,6 @@ onMounted (() => {
 	getItems();
 	connectWebsocket();
 })
-
-// Test
-// const seeFile = () => {
-// 	let fileUrl = "https://code-detective-bucket.oss-cn-beijing.aliyuncs.com/Results/user1的仓库/files/submissions[123]/submissions/submission1/backend/src/main/java/com/kos/backend/BackendApplication.java"
-// 	$.ajax({
-// 		url: fileUrl,
-// 		type: 'GET',
-// 		success: function(data) {
-// 			// data参数包含了文件内容
-// 			console.log(data); // 这里的data就是你的.java文件内容
-// 			// 在这里你可以处理文件内容，例如显示在页面上
-// 		},
-// 		error: function(xhr, status, error) {
-// 			// 处理错误情况
-// 			console.error("Error: " + error);
-// 		}
-// 	});
-// }
 
 const send2detect = () => {
     socket.send(JSON.stringify({
@@ -266,6 +248,44 @@ const getPolicy = () => {
 
 .green::after {
     background-color: #67c23a;
+}
+
+.slash_btn {
+    width: 10em;
+    height: 2.3em;
+    background: #67c23a;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.slash_btn:hover {
+    color: #67c23a;
+}
+
+.slash_btn:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.slash_btn:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 </style>

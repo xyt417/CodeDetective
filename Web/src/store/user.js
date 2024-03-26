@@ -12,7 +12,7 @@ export default {
 		repos: [],
 		websocket: null,
 	},
-	getter: {
+	getters: {
 
 	},
 	mutations: {
